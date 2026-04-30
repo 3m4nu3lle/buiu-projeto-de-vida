@@ -1,3 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
+
+:root {
+  --cor-de-fundo: #1E1E1E;
+  --roxo : #ab80e4d2;
+  --branco: #512894;
+  --botao-ativo: #3b31ad;
+  --botao-inativo: rgba(58, 55, 94, 0.5);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #43347c;
+}
+
+.titulo-principal {
+  font-size: 48px;
+  margin: 20px 0;
+  color: #4B0082; /* Roxo escuro */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.objetivo {
+  background-color: #653469;
+  border: 2px solid #4B0082;
+  border-radius: 10px;
+  width: 250px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.objetivo:hover {
+  transform: scale(1.05);
+}
+
+.objetivo-texto {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4B0082; /* Roxo escuro */
+}
+
+.cronometro {
+  display: none;
+  margin-top: 15px;
+}
+
 .contador {
   display: flex;
   justify-content: center;
@@ -5,18 +59,17 @@
 }
 
 .contador-digito {
-  padding: 0 16px;
+  padding: 0 10px;
   text-align: center;
-  min-width: 100px;
 }
 
-.contador-digito-numero {
-  font-size: 80px;
+.contador-digito p:first-child {
+  font-size: 32px;
   margin: 0;
 }
 
-.contador-digito-texto {
-  color: var(--verde);
-  font-size: 20px;
+.contador-digito p:last-child {
+  font-size: 16px;
   margin: 0;
+  color: #4B0082;
 }
