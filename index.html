@@ -4,13 +4,66 @@
   <meta charset="UTF-8">
   <title>Meus objetivos</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background-image: url('https://images.unsplash.com/photo-1609521263047-f8f205293f24');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Para melhorar a legibilidade com a imagem de fundo */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.65); /* camada escura semi-transparente */
+      z-index: -1;
+    }
+
+    .titulo-principal {
+      text-align: center;
+      margin: 40px 0 30px;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .objetivo {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      transition: all 0.3s;
+    }
+
+    .objetivo:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.02);
+    }
+  </style>
 </head>
 <body>
+
   <h1 class="titulo-principal">Meus objetivos</h1>
 
   <div class="container">
     <div class="objetivo" onclick="mostrarCronometro(0)">
-      <p class="objetivo-texto">Estudar 4 cursos na Alura</p>
+      <p class="objetivo-texto">Passar no enem ou em algum vestibular</p>
       <div class="cronometro" id="cronometro0">
         <div class="contador">
           <div class="contador-digito"><p id="dias0"></p><p>dias</p></div>
@@ -22,7 +75,7 @@
     </div>
 
     <div class="objetivo" onclick="mostrarCronometro(1)">
-      <p class="objetivo-texto">Criar 5 projetos em JavaScript</p>
+      <p class="objetivo-texto">Compra meu primeiro carro</p>
       <div class="cronometro" id="cronometro1">
         <div class="contador">
           <div class="contador-digito"><p id="dias1"></p><p>dias</p></div>
@@ -34,7 +87,7 @@
     </div>
 
     <div class="objetivo" onclick="mostrarCronometro(2)">
-      <p class="objetivo-texto">Criar um portfólio com meus 3 melhores projetos</p>
+      <p class="objetivo-texto">Conseguir um emprego</p>
       <div class="cronometro" id="cronometro2">
         <div class="contador">
           <div class="contador-digito"><p id="dias2"></p><p>dias</p></div>
@@ -46,7 +99,7 @@
     </div>
 
     <div class="objetivo" onclick="mostrarCronometro(3)">
-      <p class="objetivo-texto">Atualizar meu currículo com os certificados da Alura</p>
+      <p class="objetivo-texto">Reformar o meu quarto</p>
       <div class="cronometro" id="cronometro3">
         <div class="contador">
           <div class="contador-digito"><p id="dias3"></p><p>dias</p></div>

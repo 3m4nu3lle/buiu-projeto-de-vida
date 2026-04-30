@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
 
 :root {
-  --cor-de-fundo: #1E1E1E;
+  --cor-de-fundo: #c300ff;
   --roxo : #ab80e4d2;
-  --branco: #512894;
+  --branco: #ae00ff;
   --botao-ativo: #3b31ad;
-  --botao-inativo: rgba(58, 55, 94, 0.5);
+  --botao-inativo: rgba(255, 255, 255, 0.5);
 }
 
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #43347c;
+  background-color: #9d0fe4;
 }
 
 .titulo-principal {
   font-size: 48px;
   margin: 20px 0;
-  color: #4B0082; /* Roxo escuro */
+  color: #940808; /* Roxo escuro */
 }
 
 .container {
@@ -28,8 +28,8 @@ body {
 }
 
 .objetivo {
-  background-color: #653469;
-  border: 2px solid #4B0082;
+  background-color: #ffffff;
+  border: 2px solid #7a0ec7;
   border-radius: 10px;
   width: 250px;
   padding: 20px;
@@ -44,7 +44,7 @@ body {
 .objetivo-texto {
   font-size: 20px;
   font-weight: bold;
-  color: #4B0082; /* Roxo escuro */
+  color: #9500ff; /* Roxo escuro */
 }
 
 .cronometro {
@@ -71,5 +71,5 @@ body {
 .contador-digito p:last-child {
   font-size: 16px;
   margin: 0;
-  color: #4B0082;
+  color: #d6d2d8;
 }
