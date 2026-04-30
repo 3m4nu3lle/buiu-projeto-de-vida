@@ -3,7 +3,7 @@
 :root {
   --cor-de-fundo: #1E1E1E;
   --roxo : #ab80e4d2;
-  --branco: #FFFFFF;
+  --branco: #512894;
   --botao-ativo: #3b31ad;
   --botao-inativo: rgba(58, 55, 94, 0.5);
 }
@@ -11,7 +11,7 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: #43347c;
 }
 
 .titulo-principal {
@@ -28,7 +28,7 @@ body {
 }
 
 .objetivo {
-  background-color: #fff;
+  background-color: #653469;
   border: 2px solid #4B0082;
   border-radius: 10px;
   width: 250px;
