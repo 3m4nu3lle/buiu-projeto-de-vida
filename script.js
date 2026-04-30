@@ -7,12 +7,12 @@ const tempoObjetivo4 = new Date("2027-05-31T23:59:00"); // Reformar meu quarto
 // Lista com todos os tempos
 const tempos = [tempoObjetivo1, tempoObjetivo2, tempoObjetivo3, tempoObjetivo4];
 
-// Função que calcula o tempo restante
+// Função para calcular tempo restante
 function calculaTempo(tempoObjetivo) {
-  let tempoAtual = new Date();
-  let tempoFinal = tempoObjetivo - tempoAtual;
+  let agora = new Date();
+  let diff = tempoObjetivo - agora;
 
-  let segundos = Math.floor(tempoFinal / 1000);
+  let segundos = Math.floor(diff / 1000);
   let minutos = Math.floor(segundos / 60);
   let horas = Math.floor(minutos / 60);
   let dias = Math.floor(horas / 24);
@@ -21,14 +21,10 @@ function calculaTempo(tempoObjetivo) {
   minutos %= 60;
   horas %= 24;
 
-  if (tempoFinal > 0) {
-    return [dias, horas, minutos, segundos];
-  } else {
-    return [0, 0, 0, 0];
-  }
+  return diff > 0 ? [dias, horas, minutos, segundos] : [0, 0, 0, 0];
 }
 
-// Função que atualiza todos os cronômetros
+// Atualiza cronômetro
 function atualizaCronometro() {
   for (let i = 0; i < tempos.length; i++) {
     let valores = calculaTempo(tempos[i]);
@@ -39,10 +35,11 @@ function atualizaCronometro() {
   }
 }
 
-// Função que inicia o cronômetro
-function comecaCronometro() {
-  atualizaCronometro(); // inicia imediatamente
-  setInterval(atualizaCronometro, 1000); // atualiza a cada segundo
+// Mostrar cronômetro ao clicar
+function mostrarCronometro(indice) {
+  let cronometro = document.getElementById("cronometro" + indice);
+  cronometro.style.display = cronometro.style.display === "block" ? "none" : "block";
 }
 
-comecaCronometro();
+// Inicia atualização
+setInterval(atualizaCronometro, 1000);
